@@ -1,12 +1,12 @@
-AWS bundle
-==========
+AWS API Gateway bundle
+======================
 
 [![Build Status](https://api.travis-ci.com/Ang3/aws-api-gateway-bundle.svg?branch=main)](https://app.travis-ci.com/github/Ang3/aws-api-gateway-bundle)
 [![Latest Stable Version](https://poser.pugx.org/ang3/aws-api-gateway-bundle/v/stable)](https://packagist.org/packages/ang3/aws-api-gateway-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/ang3/aws-api-gateway-bundle/v/unstable)](https://packagist.org/packages/ang3/aws-api-gateway-bundle)
 [![Total Downloads](https://poser.pugx.org/ang3/aws-api-gateway-bundle/downloads)](https://packagist.org/packages/ang3/aws-api-gateway-bundle)
 
-This bundle integrates AWS SDK and provide some useful services for your project.
+This bundle integrates AWS API Gateway to your project.
 
 **Features**
 
