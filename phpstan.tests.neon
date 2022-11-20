@@ -1,0 +1,6 @@
+parameters:
+  paths:
+    - %currentWorkingDirectory%/tests
+  inferPrivatePropertyTypeFromConstructor: true
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false

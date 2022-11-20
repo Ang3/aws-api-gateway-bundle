@@ -1,0 +1,28 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # Autowiring
+  Ang3\Bundle\AwsApiGatewayBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Resources}'
+
+  # Credentials
+  ang3.aws_api_gateway.credentials:
+    class: 'Aws\Credentials\Credentials'
+    arguments:
+      - '%env(resolve:AWS_API_GATEWAY_KEY)%'
+      - '%env(resolve:AWS_API_GATEWAY_SECRET)%'
+
+  Ang3\Bundle\AwsApiGatewayBundle\Service\ApiClient:
+    arguments:
+      $requestSigner: '@Ang3\Bundle\AwsApiGatewayBundle\Service\RequestSigner'
+      $region: '%env(resolve:AWS_API_GATEWAY_REGION)%'
+  ang3.aws_api_gateway.client:
+    alias: Ang3\Bundle\AwsApiGatewayBundle\Service\ApiClient
+    public: true
+
+  Ang3\Bundle\AwsApiGatewayBundle\Service\RequestSigner:
+    arguments:
+      $credentials: '@ang3.aws_api_gateway.credentials'
